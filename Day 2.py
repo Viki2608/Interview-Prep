@@ -26,12 +26,22 @@
 # its only neighbour element 3.
 # If 1 is returned then the generated output will be 1 else 0.
 
-N =int(input())
-l=[]
-for i in range(N):
-    l.append(int(input("Enter array elements")))
-op=0
-for i in range(N-1):
-    if l[i]<l[i+1]:
-        op=i+1
-print(op)
+# N =int(input())
+# l=[]
+# for i in range(N):
+#     l.append(int(input("Enter array elements")))
+# op=0
+# for i in range(N-1):
+#     if l[i]<l[i+1]:
+#         op=i+1
+# print(op)
+
+
+a,b=0,1
+count=0
+while (count<5):
+    c=a+b
+    a=b
+    b=c
+    print(c)
+    count +=1
