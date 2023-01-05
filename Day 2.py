@@ -26,22 +26,44 @@
 # its only neighbour element 3.
 # If 1 is returned then the generated output will be 1 else 0.
 
-# N =int(input())
-# l=[]
-# for i in range(N):
-#     l.append(int(input("Enter array elements")))
-# op=0
-# for i in range(N-1):
-#     if l[i]<l[i+1]:
-#         op=i+1
-# print(op)
+N =int(input())
+l=[]
+for i in range(N):
+    l.append(int(input("Enter array elements")))
+op=0
+for i in range(N-1):
+    if l[i]<l[i+1]:
+        op=i+1
+print(op)
 
 
-a,b=0,1
-count=0
-while (count<5):
-    c=a+b
-    a=b
-    b=c
-    print(c)
-    count +=1
+# Given a number N, find the first N Fibonacci numbers. The first two number of the series are 1 and 1.
+
+# Example 1:
+
+# Input:
+# N = 5
+# Output: 1 1 2 3 5
+# Example 2:
+
+# Input:
+# N = 7
+# Output: 1 1 2 3 5 8 13
+
+n=int(input("Enter a number"))
+a,b=1,1
+l=[]
+if n==0:
+    print(l)
+elif(n==1):
+    l.append(a)
+    print(l)
+else:
+    l.append(a)
+    l.append(b)
+    for i in range(n-2):
+        c=a+b
+        a=b
+        b=c
+        l.append(c)
+    print(l)
